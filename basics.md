@@ -159,8 +159,130 @@ use variables inside strings (like rails)
     => ["BE": "Belgium", "US": "United States", "CA": "Canada"]
     let ca = countries.removeValueForKey("CA")
 
-
     let currencies = ["US": "Dollar", "UK":"Pound", "JP": "Yen"]
     let ukCurrency = currencies["UK"]
 
 #### Loops
+
+    for item in todo {
+      println(item)
+    }
+    =>
+    ee
+    aa
+    bb
+    dd
+
+* view / show assistant editor to show the actual values
+
+    for number in 1...10 {
+      println("\(number) times 2 is \(number*2)")
+    }
+    =>
+    1 times 2 is 2
+    2 times 2 is 4
+    3 times 2 is 6
+    4 times 2 is 8
+    5 times 2 is 10
+    6 times 2 is 12
+    7 times 2 is 14
+    8 times 2 is 16
+    9 times 2 is 18
+    10 times 2 is 20
+
+* 1...10 is a range from 1 to 10, closed range, inclusive
+* 1..<10 is a range from 1 to 9, half closed range, upper limit is non-inclusive
+
+    for number in 1...10 {
+      println("\(number) * 7 = \(number*7)")
+    }
+
+#### control flow
+
+    var index = 0
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    while index < numbers.count {
+        println(numbers[index])
+        index++
+    }
+
+
+    var index = 0
+    while index < todo.count {
+    println(todo[index])
+        index++
+    }
+
+
+    index = 0
+    do {
+      println(todo[index])
+      index++
+    } while index < todo.count
+
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    var index = 0
+    while index < numbers.count {
+      println(numbers[index])
+      index++
+    }
+
+#### for condition increments
+
+    for var i = 0; i < todo.count; i++ {
+      println(todo[i])
+    }
+    =>
+    index, condition, increment
+
+* < less than
+* <= less than or equal to
+* > greater than
+* >= greater than or equal to
+* == equal to
+* != not equal to
+* === identical
+* !== not identical
+
+#### if statement
+
+    let cards = 1...13
+    for card in cards {
+      if card == 11 {
+        println("Jack")
+      } else {
+        println(card)
+      }
+    }
+
+
+    let months = [1, 2, 3]
+    for month in months {
+        if month == 1 {
+            println("January")
+        } else if month == 2 {
+            println("February")
+        } else if month == 3 {
+            println("March")
+        }
+    }
+
+#### switch
+
+    for month in months {
+        switch month {
+        case 1:
+            println("January")
+        case 2...3:
+            println("Others")
+        default:
+            println(month)
+        }
+    }
+
+#### comparision and logical operators
+
+* && is the AND operator
+* || is the OR operator
+* ! is the NOT operator
