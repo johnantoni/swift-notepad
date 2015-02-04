@@ -52,3 +52,34 @@ use variables inside strings (like rails)
     let yearPublished = 2011
 
 #### binary
+
+    let height = 12
+    let width = 10
+    let area = height * width
+    let areaInMeters = Double(area) / 10.764
+
+#### operator precedence
+
+    var x = 100 + 100 - 5 * 2 / 3 % 7
+    = 197
+    precedence 150
+    1. multiplication
+    2. division
+    3. remainder
+    precedence 140
+    4. addition
+    5. subtraction
+    << left to right >>
+
+
+    let y = 25 - 5 * 2
+    = 15 (25 - 10)
+
+    let a = (2 + 2) * 2 + 2
+    = 10
+
+    let remainder = 7 % 7
+    = 0
+
+    let z = 100 / 2 + 5
+    = 55
